@@ -1,0 +1,30 @@
+div.gemsButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    width: 200px;
+    border-radius: 4px;
+    background-color: rgba(211, 211, 211, 0.5); 
+    transition: .2s ease-in-out;
+}
+
+div.gemsButton:hover{
+    background-color: rgba(240, 255, 0, .5);
+}
+
+.gem{
+    width: 30px;
+    height: 30px;
+    margin-right: auto;
+    background-image: url('../resources/gem.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.menu div.gemsButton > p{
+    margin-right: 8px;
+    font-size: 21px;
+    color: #fff;
+}

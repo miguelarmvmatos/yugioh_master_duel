@@ -1,0 +1,40 @@
+.menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    padding: 20px;
+}
+
+.menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.menu li{
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.menu li svg{
+    font-size: 35px;
+    transition: .2s ease-in-out;
+}
+
+.menu li:not(.gemsButton):hover svg{
+    color: rgba(240, 255, 0, .9);
+}
+
+.menu li p{
+    font-size: 15px;
+    transition: .2s ease-in-out;
+}
+
+.menu li:not(.gemsButton):hover p{
+    color: rgba(240, 255, 0, 1);
+}
