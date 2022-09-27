@@ -38,12 +38,12 @@ function Friends() {
                 <Link to={`/${friend.id}`} key={index} className="friend">
                   <div className="friendIconData">
                     <img
-                      src={require(`../resources/${friend.iconFrame}.png`)}
+                      src={require(`../resources/frames/${friend.iconFrame}.png`)}
                       alt={friend.icon}
                       className="friendFrame"
                     />
                     <img
-                      src={require(`../resources/${friend.icon}.png`)}
+                      src={require(`../resources/icons/${friend.icon}.png`)}
                       alt={friend.icon}
                       className="friendIcon"
                     />
@@ -77,12 +77,12 @@ function Friends() {
                 <Link to={`/${friend.id}`} key={index} className="friend">
                   <div className="friendIconData">
                     <img
-                      src={require(`../resources/${friend.iconFrame}.png`)}
+                      src={require(`../resources/frames/${friend.iconFrame}.png`)}
                       alt={friend.icon}
                       className="friendFrame"
                     />
                     <img
-                      src={require(`../resources/${friend.icon}.png`)}
+                      src={require(`../resources/icons/${friend.icon}.png`)}
                       alt={friend.icon}
                       className="friendIcon"
                     />
@@ -111,12 +111,12 @@ function Friends() {
                 <Link to={`/${friend.id}`} key={index} className="friend">
                   <div className="friendIconData">
                     <img
-                      src={require(`../resources/${friend.iconFrame}.png`)}
+                      src={require(`../resources/frames/${friend.iconFrame}.png`)}
                       alt={friend.icon}
                       className="friendFrame"
                     />
                     <img
-                      src={require(`../resources/${friend.icon}.png`)}
+                      src={require(`../resources/icons/${friend.icon}.png`)}
                       alt={friend.icon}
                       className="friendIcon"
                     />
