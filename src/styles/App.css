@@ -20,3 +20,26 @@ ul{
     list-style: none;
     padding: 0;
 }
+
+@keyframes pulse-white {
+  0% {
+    background-color: rgba(240, 255, 0, 0.5);
+  }
+  
+  50% {
+    background-color: rgba(240, 255, 0, .4);
+  }
+  
+  100% {
+    background-color: rgba(240, 255, 0, 0.5);
+  }
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translateY(15px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}

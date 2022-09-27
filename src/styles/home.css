@@ -2,10 +2,23 @@
     width: 100%;
     height: 100vh;
     position: relative;
-    background-image: url('../resources/background.jpg');
+    background-image: url('../resources/background2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0% 0%;
+}
+
+.monsterImage{    
+    width: 40%;
+    height: 100vh;
+    position: fixed;
+    right: 3%;
+    top: 45px;
+    background-image: url('../resources/dingirsu.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    animation: MoveUpDown 10s linear infinite;
 }
 
   

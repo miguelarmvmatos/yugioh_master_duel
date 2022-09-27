@@ -11,11 +11,12 @@ div.gemsButton{
 
 div.gemsButton:hover{
     background-color: rgba(240, 255, 0, .5);
+    animation: pulse-white .07s infinite;
 }
 
 .gem{
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     margin-right: auto;
     background-image: url('../resources/gem.png');
     background-size: contain;
@@ -27,4 +28,12 @@ div.gemsButton:hover{
     margin-right: 8px;
     font-size: 21px;
     color: #fff;
+    text-shadow: none;
 }
+
+li div.gemsButton svg{
+    font-size: 25px;
+}
+
+
+  

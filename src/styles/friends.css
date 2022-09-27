@@ -1,0 +1,105 @@
+.friendsNav{
+    background-image: url('../resources/background2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.friendsNav > div{
+    margin-bottom: 3px;
+}
+
+.friendsNav .MuiAccordion-root{
+    background-color: rgb(7,19,26);
+    color: #fff;
+}
+
+.friendsNav .MuiAccordionSummary-root{
+    padding: 10px 20px;
+    gap: 10px;
+}
+
+.friendsNav .MuiAccordionSummary-root .MuiAccordionSummary-content{
+    gap: 25px;
+}
+.friendsNav .MuiAccordionSummary-expandIconWrapper{
+    order: -1;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+.friendsNav .MuiAccordionSummary-expandIconWrapper.Mui-expanded{
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.friendsNav .MuiSvgIcon-root{
+    font-size: 35px;
+    color: #fff;
+}
+
+.friendsNav .MuiAccordionSummary-expandIconWrapper.Mui-expanded .MuiSvgIcon-root{
+    color: rgba(240, 255, 0, .9);
+}
+
+.friendsNav .MuiAccordionDetails-root .friend{
+    background-color: rgb(23,52,70);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    border-left: 4px solid rgba(240, 255, 0, .9);
+    background-color: rgb(23,52,70);
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.friendsNav .MuiAccordionDetails-root .friend:hover{
+    -moz-box-shadow: inset 0 0 15px rgba(240, 255, 0, .9);
+    -webkit-box-shadow: inset 0 0 15px rgba(240, 255, 0, .9);
+    box-shadow: inset 0 0 15px rgba(240, 255, 0, .9);
+}
+.friendsNav .friendIconData{
+    position: relative;
+    height: 65px;
+    width: 73px;
+}
+
+.friendsNav .friendIconData .friendFrame{
+    width: 100%;
+    height: 100%;
+}
+
+.friendsNav .friendIconData .friendIcon{
+    width: 70px;
+    position: absolute;
+    top: 2px;
+    left: 1px;
+}
+
+.friendsNav .friendIconData .status{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(51,48,47);
+    border-radius: 50%;
+    position: absolute;
+    right: -3px;
+    bottom: 10px;
+    border: 1px solid grey;
+}
+
+.friendsNav .friendIconData .status.online{
+    background-color: lawngreen;
+}
+
+
+/*rgb(51,48,47)*/

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 import GemsButton from "./GemsButton";
+import Friends from "./Friends";
 
 import "../styles/menu.css";
 
@@ -12,6 +13,21 @@ import HandshakeIcon from "@mui/icons-material/Handshake";
 import MenuIcon from "@mui/icons-material/Menu";
 
 function Menu() {
+  const [burgerState, setBurgerStatus] = useState(false);
+  const friendsTrigger = {
+    transform: `${burgerState ? "translateX(0)" : "translateX(100%)"}`,
+  };
+
+  let friendsRef = useRef();
+
+  useEffect(() => {
+    document.addEventListener("mousedown", (event) => {
+      if (!friendsRef.current.contains(event.target)) {
+        setBurgerStatus(false);
+      }
+    });
+  });
+
   return (
     <div className="menu">
       <ul>
@@ -36,7 +52,7 @@ function Menu() {
             <p>Gift Box</p>
           </Link>
         </li>
-        <li>
+        <li onClick={() => setBurgerStatus(true)}>
           <HandshakeIcon />
           <p>Friend</p>
         </li>
@@ -45,6 +61,14 @@ function Menu() {
           <p>Submenu</p>
         </li>
       </ul>
+      <div
+        className="friends"
+        style={friendsTrigger}
+        show={burgerState}
+        ref={friendsRef}
+      >
+        <Friends />
+      </div>
     </div>
   );
 }

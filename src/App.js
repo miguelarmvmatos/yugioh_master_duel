@@ -18,6 +18,7 @@ import Pass from "./routes/Pass";
 import EditPlayer from "./routes/EditPlayer";
 import Replay from "./routes/Replay";
 import DataPlayer from "./routes/DataPlayer";
+import FriendDetail from "./routes/FriendDetail";
 
 import "./styles/App.css";
 
@@ -42,6 +43,7 @@ function App() {
           <Route path="editplayer" element={<EditPlayer />} />
           <Route path="replay" element={<Replay />} />
           <Route path="dataplayer" element={<DataPlayer />} />
+          <Route path="/:id" element={<FriendDetail />} />
         </Routes>
       </BrowserRouter>
     </div>

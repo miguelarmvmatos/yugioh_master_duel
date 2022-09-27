@@ -4,7 +4,7 @@ import "../styles/home.css";
 function Home() {
   return (
     <div className="home">
-      <p>Home</p>
+      <div className="monsterImage"></div>
     </div>
   );
 }
