@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function Player() {
+function Player(props) {
+  useEffect(() => {
+    props.funcNav(false);
+  }, []);
+  console.log("player", props);
   return (
     <ul>
       <li>

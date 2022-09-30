@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import GemsButton from "./GemsButton";
 import Friends from "./Friends";
+import BurgerMenu from "./BurgerMenu";
 
 import "../styles/menu.css";
 
@@ -13,16 +14,24 @@ import HandshakeIcon from "@mui/icons-material/Handshake";
 import MenuIcon from "@mui/icons-material/Menu";
 
 function Menu() {
+  const [burgerFriendState, setBurgerFriendStatus] = useState(false);
   const [burgerState, setBurgerStatus] = useState(false);
   const friendsTrigger = {
+    transform: `${burgerFriendState ? "translateX(0)" : "translateX(100%)"}`,
+  };
+  const burgerTrigger = {
     transform: `${burgerState ? "translateX(0)" : "translateX(100%)"}`,
   };
 
   let friendsRef = useRef();
+  let burgerRef = useRef();
 
   useEffect(() => {
     document.addEventListener("mousedown", (event) => {
       if (!friendsRef.current.contains(event.target)) {
+        setBurgerFriendStatus(false);
+      }
+      if (!burgerRef.current.contains(event.target)) {
         setBurgerStatus(false);
       }
     });
@@ -52,22 +61,29 @@ function Menu() {
             <p>Gift Box</p>
           </Link>
         </li>
-        <li onClick={() => setBurgerStatus(true)}>
+        <li onClick={() => setBurgerFriendStatus(true)}>
           <HandshakeIcon />
-          <p>Friend</p>
+          <p>Friends</p>
         </li>
-        <li>
+        <li className="burgerNav" onClick={() => setBurgerStatus(true)}>
           <MenuIcon />
-          <p>Submenu</p>
         </li>
       </ul>
       <div
         className="friends"
         style={friendsTrigger}
-        show={burgerState}
+        show={burgerFriendState}
         ref={friendsRef}
       >
-        <Friends />
+        <Friends funcFriends={setBurgerFriendStatus} />
+      </div>
+      <div
+        className="burgerMenu"
+        style={burgerTrigger}
+        show={burgerState}
+        ref={burgerRef}
+      >
+        <BurgerMenu funcBurger={setBurgerStatus} />
       </div>
     </div>
   );

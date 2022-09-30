@@ -9,15 +9,15 @@
 }
 
 .monsterImage{    
-    width: 40%;
+    width: 100vw;
     height: 100vh;
     position: fixed;
     right: 3%;
     top: 45px;
     background-image: url('../resources/dingirsu.png');
-    background-size: cover;
+    background-size: 620px 100vh;
     background-repeat: no-repeat;
-    background-position: 0% 0%;
+    background-position: top right;
     animation: MoveUpDown 10s linear infinite;
 }
 

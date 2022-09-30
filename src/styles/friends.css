@@ -101,5 +101,18 @@
     background-color: lawngreen;
 }
 
+.closeButton{    
+    text-align: right;
+    padding: 10px;
+    cursor: pointer;
+}
 
-/*rgb(51,48,47)*/
+.closeButton svg{
+    font-size: 35px;
+    color: #fff;    
+    transition: .2s ease-in-out;
+}
+
+.closeButton:hover svg{
+    color: rgba(240, 255, 0, .9);
+}

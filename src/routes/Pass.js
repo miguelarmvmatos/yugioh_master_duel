@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-function Pass() {
+function Pass(props) {
+  useEffect(() => {
+    props.funcNav(false);
+  }, []);
+  console.log("pass", props);
   return <div>Pass</div>;
 }
 

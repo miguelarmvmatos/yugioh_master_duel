@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Menu from "./components/Menu";
 import Sidebar from "./components/Sidebar";
+import GoBack from "./components/GoBack";
 
 import Home from "./routes/Home";
 import Online from "./routes/Online";
@@ -23,27 +24,43 @@ import FriendDetail from "./routes/FriendDetail";
 import "./styles/App.css";
 
 function App() {
+  const [showNav, setShowNav] = useState(true);
+  console.log("shownav", showNav);
   return (
     <div className="app">
       <BrowserRouter>
-        <Menu />
-        <Sidebar />
+        {showNav && <Menu />}
+        {showNav && <Sidebar />}
+        {!showNav && <GoBack funcNav={setShowNav} />}
+
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="duel" element={<Online />} />
-          <Route path="deck" element={<Deck />} />
-          <Route path="solo" element={<Solo />} />
-          <Route path="shop" element={<Shop />} />
-          <Route path="pass" element={<Pass />} />
-          <Route path="player" element={<Player />} />
-          <Route path="gems" element={<Gems />} />
-          <Route path="notifications" element={<Notifications />} />
-          <Route path="missions" element={<Missions />} />
-          <Route path="gifts" element={<Gifts />} />
-          <Route path="editplayer" element={<EditPlayer />} />
-          <Route path="replay" element={<Replay />} />
-          <Route path="dataplayer" element={<DataPlayer />} />
-          <Route path="/:id" element={<FriendDetail />} />
+          <Route path="duel" element={<Online funcNav={setShowNav} />} />
+          <Route path="deck" element={<Deck funcNav={setShowNav} />} />
+          <Route path="solo" element={<Solo funcNav={setShowNav} />} />
+          <Route path="shop" element={<Shop funcNav={setShowNav} />} />
+          <Route path="pass" element={<Pass funcNav={setShowNav} />} />
+          <Route path="player" element={<Player funcNav={setShowNav} />} />
+          <Route path="gems" element={<Gems funcNav={setShowNav} />} />
+          <Route
+            path="notifications"
+            element={<Notifications funcNav={setShowNav} />}
+          />
+          <Route path="missions" element={<Missions funcNav={setShowNav} />} />
+          <Route path="gifts" element={<Gifts funcNav={setShowNav} />} />
+          <Route
+            path="editplayer"
+            element={<EditPlayer funcNav={setShowNav} />}
+          />
+          <Route path="replay" element={<Replay funcNav={setShowNav} />} />
+          <Route
+            path="dataplayer"
+            element={<DataPlayer funcNav={setShowNav} />}
+          />
+          <Route
+            path="friend/:id"
+            element={<FriendDetail funcNav={setShowNav} />}
+          />
         </Routes>
       </BrowserRouter>
     </div>

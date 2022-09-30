@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-function Replay() {
+function Replay(props) {
+  useEffect(() => {
+    props.funcNav(false);
+  }, []);
+  console.log("replay", props);
   return <div>Replay</div>;
 }
 

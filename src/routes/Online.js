@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-function Online() {
+function Online(props) {
+  useEffect(() => {
+    props.funcNav(false);
+  }, []);
+  console.log("online", props);
   return <div>Online</div>;
 }
 

@@ -1,0 +1,99 @@
+.burgerMenuNav ul{
+    display: block;
+}
+
+.burgerMenuNav li{
+    color: #fff;
+    transition: .2s ease-in-out;
+    display: block;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+}
+
+.burgerMenuNav li.burgerFriends{
+    padding: 0;
+    border-bottom: 0;
+}
+
+.burgerMenuNav li.burgerFriends .MuiAccordion-root{
+    width: 100%;
+    background-color: transparent;
+}
+
+.burgerMenuNav li.burgerFriends  .MuiAccordionSummary-root.Mui-expanded{
+    min-height: 0;
+}
+
+.burgerMenuNav li.burgerFriends .MuiAccordionSummary-content{
+    align-items: center;
+    gap: 15px;
+}
+
+.burgerMenuNav li.burgerFriends .MuiAccordionSummary-content.Mui-expanded{
+    margin: 12px 0;
+}
+
+.burgerMenuNav li a{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.burgerMenuNav li svg{    
+    font-size: 35px;
+    color: #fff;
+    transition: .2s ease-in-out;
+}
+
+.burgerMenuNav ul li:not(.burgerFriends):hover svg{
+    color: rgba(240, 255, 0, .9);
+}
+
+.burgerMenuNav ul li.burgerFriends:hover .MuiAccordionSummary-content > svg{
+    color: rgba(240, 255, 0, .9);
+}
+
+.burgerMenuNav li p{
+    color: #fff;
+    display: inline-block;
+    font-size: 15px;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 1);
+    transition: .2s ease-in-out;
+}
+
+.burgerMenuNav > ul li:not(.burgerFriends):hover p{
+    color: rgba(240, 255, 0, 1);
+}
+
+.burgerMenuNav > ul li.burgerFriends:hover .MuiAccordionSummary-content > p{
+    color: rgba(240, 255, 0, 1);    
+}
+
+.burgerMenuNav li.burgerFriends .friendsNav{
+    background-image: none;
+}
+
+.closeButton{    
+    text-align: right;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.closeButton svg{
+    font-size: 35px;
+    color: #fff;    
+    transition: .2s ease-in-out;
+}
+
+.closeButton:hover svg{
+    color: rgba(240, 255, 0, .9);
+}
+
+.burgerMenuNav li.burgerFriends .closeButton{
+    display: none;
+}

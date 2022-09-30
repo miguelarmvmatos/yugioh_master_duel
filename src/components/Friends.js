@@ -6,12 +6,13 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import CloseIcon from "@mui/icons-material/Close";
 
 import "../styles/friends.css";
 
 import friendsData from "../api/friends.json";
 
-function Friends() {
+function Friends(props) {
   const data = friendsData.data;
   const follow = data.reduce((a, t) => a + (t.type === "followed"), 0);
   const online = data.reduce((a, t) => a + (t.status === "online"), 0);
@@ -20,6 +21,9 @@ function Friends() {
 
   return (
     <div className="friendsNav">
+      <div className="closeButton" onClick={() => props.funcFriends(false)}>
+        <CloseIcon />
+      </div>
       <div className="followed">
         <Accordion>
           <AccordionSummary
@@ -35,7 +39,7 @@ function Friends() {
           <AccordionDetails>
             {data.map((friend, index) => {
               return friend.type === "followed" ? (
-                <Link to={`/${friend.id}`} key={index} className="friend">
+                <Link to={`friend/${friend.id}`} key={index} className="friend">
                   <div className="friendIconData">
                     <img
                       src={require(`../resources/frames/${friend.iconFrame}.png`)}
@@ -74,7 +78,7 @@ function Friends() {
           <AccordionDetails>
             {data.map((friend, index) => {
               return friend.type === "follower" ? (
-                <Link to={`/${friend.id}`} key={index} className="friend">
+                <Link to={`friend/${friend.id}`} key={index} className="friend">
                   <div className="friendIconData">
                     <img
                       src={require(`../resources/frames/${friend.iconFrame}.png`)}
@@ -108,7 +112,7 @@ function Friends() {
           <AccordionDetails>
             {data.map((friend, index) => {
               return friend.type === "blocked" ? (
-                <Link to={`/${friend.id}`} key={index} className="friend">
+                <Link to={`friend/${friend.id}`} key={index} className="friend">
                   <div className="friendIconData">
                     <img
                       src={require(`../resources/frames/${friend.iconFrame}.png`)}

@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-function DataPlayer() {
+function DataPlayer(props) {
+  useEffect(() => {
+    props.funcNav(false);
+  }, []);
+
+  console.log("DataPlayer", props);
   return <div>DataPlayer</div>;
 }
 

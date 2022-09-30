@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-function Notifications() {
+function Notifications(props) {
+  useEffect(() => {
+    props.funcNav(false);
+  }, []);
+  console.log("notifications", props);
   return <div>Notifications</div>;
 }
 

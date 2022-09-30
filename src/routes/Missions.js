@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-function Missions() {
+function Missions(props) {
+  useEffect(() => {
+    props.funcNav(false);
+  }, []);
+  console.log("missions", props);
   return <div>Missions</div>;
 }
 
